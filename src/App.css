@@ -2,3 +2,19 @@
   text-align: center;
   color: white
 }
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(26, 69, 72), rgb(20 15 35));
+  /* Optional: light overlay */
+  z-index: 9999;
+  backdrop-filter: blur(2px);
+  /* Optional: blur background */
+}
