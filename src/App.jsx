@@ -4,6 +4,9 @@ import Navigationbar from './components/Navigationbar'
 import Footer from './components/Footer'
 import Loader from './components/Loader'
 import Home from './components/Home'
+import Resume from './components/Resume'
+import About from './components/About'
+import Projects from './components/Projects'
 import './App.css'
 
 function App() {
@@ -23,9 +26,9 @@ function App() {
           <Navigationbar />
           <Routes> {/*groups and selects which route to render.*/}
             <Route path='/' element={<Home />} /> {/*defines how to map a URL path to a component.*/}
-            <Route path='about' element={<h3>About</h3>} />
-            <Route path='project' element={<h3>Project</h3>} />
-            <Route path='resume' element={<h3>Resume</h3>} />
+            <Route path='about' element={<About />} />
+            <Route path='project' element={<Projects />} />
+            <Route path='resume' element={<Resume />} />
             <Route path='*' element={<Navigate to='/' />} />
           </Routes>
           <Footer />
