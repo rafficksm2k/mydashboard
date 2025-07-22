@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Navigationbar from './components/Navigationbar'
 import Footer from './components/Footer'
 import Loader from './components/Loader'
-import Home from './components/Home'
-import Resume from './components/Resume'
-import About from './components/About'
-import Projects from './components/Projects'
+import Home from './components/home/Home'
+import Resume from './components/resume/Resume'
+import About from './components/about/About'
+import Projects from './components/projects/Projects'
 import './App.css'
 
 function App() {
