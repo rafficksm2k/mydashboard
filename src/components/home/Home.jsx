@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import home from '../../assets/home.png'
 import '../../styles/home.scss'
 import Techstack from './Techstack'
+import Toolstack from './Toolstack'
 
 export default function Home() {
     return (<>
@@ -39,14 +40,24 @@ export default function Home() {
         </Container>
         <Container>
             <Row>
-                <Col md={4}>
-
-                </Col>
-                <Col md={6}>
+                <Col md={12}>
                     <h2 className="project-heading">
                         Professional <strong className="purple">Skillset </strong>
                     </h2>
+                </Col>
+            </Row>
+            <Row>
+                <Col md={12}>
                     <Techstack />
+                </Col>
+            </Row>
+            <Row>
+
+                <Col md={12}>
+                    <h2 className="project-heading">
+                        Tools <strong className="purple">I use </strong>
+                    </h2>
+                    <Toolstack />
                 </Col>
             </Row>
         </Container>

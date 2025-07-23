@@ -1,7 +1,7 @@
 import React from 'react'
-import { DiJavascript1, DiReact, DiJava, DiGit, DiDocker, DiOpenshift } from "react-icons/di";
+import { DiJavascript1, DiReact, DiJava } from "react-icons/di";
 import { BiLogoRedux } from "react-icons/bi";
-import { SiWebpack } from "react-icons/si";
+
 import { Container, Row, Col } from 'react-bootstrap';
 
 export default function Techstack() {
@@ -21,16 +21,7 @@ export default function Techstack() {
                     <DiJava />
                 </Col>
                 <Col xs={4} md={2} className='tech-icons'>
-                    <DiGit />
-                </Col>
-                <Col xs={4} md={2} className='tech-icons'>
-                    <DiDocker />
-                </Col>
-                <Col xs={4} md={2} className='tech-icons'>
-                    <DiOpenshift />
-                </Col>
-                <Col xs={4} md={2} className='tech-icons'>
-                    <SiWebpack />
+                    <DiJava />
                 </Col>
             </Row>
         </Container>
