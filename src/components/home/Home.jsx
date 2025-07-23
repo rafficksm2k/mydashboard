@@ -1,5 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 import home from '../../assets/home.png'
 import '../../styles/home.scss'
 import Techstack from './Techstack'
@@ -32,12 +34,13 @@ export default function Home() {
                     <p>With 12 years of hands-on experience in the software industry, including roles at
                         <strong className="purple"> IBM and Photon Ltd.</strong>,
                         I bring deep expertise in <strong className="purple">JavaScript and ReactJS. </strong>
-                        I’ve developed and maintained complex applications in banking, insurance, and e-commerce sectors.
+                        I’ve developed and maintained complex applications in
+                        <strong className="purple"> Banking, Insurance, and E-Commerce sectors. </strong>
                         I enjoy solving real-world problems through clean, scalable, and maintainable code,
                         and I’m always eager to learn and adapt to new technologies.</p>
                 </Col>
             </Row>
-        </Container>
+        </Container >
         <Container>
             <Row>
                 <Col md={12}>
@@ -58,6 +61,63 @@ export default function Home() {
                         Tools <strong className="purple">I use </strong>
                     </h2>
                     <Toolstack />
+                </Col>
+            </Row>
+            <Row>
+                <Col md={12}>
+                    <h2 className="project-heading">
+                        Work <strong className="purple">Experience </strong>
+                    </h2>
+                </Col>
+            </Row>
+
+            <Row>
+                <Col md={12}>
+                    <VerticalTimeline>
+                        <VerticalTimelineElement
+                            className="vertical-timeline-element--work"
+                            contentStyle={{ background: 'rgba(30, 68, 72, 1)', color: '#fff' }}
+                            contentArrowStyle={{ borderRight: '7px solid  rgba(30, 68, 72, 1)' }}
+                            date="2018 - 2023"
+                            iconStyle={{ background: 'rgba(30, 68, 72, 1)', color: '#fff' }}
+                        >
+                            <h3 className="vertical-timeline-element-title"><strong className="purple">System Analyst @IBM</strong></h3>
+                            <h4 className="vertical-timeline-element-subtitle">Chennai, India</h4>
+                            <p>
+                                Insurance Web Development
+                            </p>
+                            <p>
+                                React JS | Javascript | Docker | IBM Openshift | Jenkins | JIRA
+                            </p>
+                        </VerticalTimelineElement>
+                        <VerticalTimelineElement
+                            className="vertical-timeline-element--work"
+                            contentStyle={{ background: 'rgba(30, 68, 72, 1)', color: '#fff' }}
+                            contentArrowStyle={{ borderRight: '7px solid  rgb( 30, 68, 72, 1)' }}
+                            date="2010 - 2017"
+                            iconStyle={{ background: 'rgb( 30, 68, 72, 1)', color: '#fff' }}
+                        >
+                            <h3 className="vertical-timeline-element-title"><strong className="purple">Senior Software Engineer @Photon Interactive</strong></h3>
+                            <h4 className="vertical-timeline-element-subtitle">Chennai, India</h4>
+                            <p>
+                                Banking | E-Commerce
+                            </p>
+                            <p>
+                                Java | React JS | Javascript | GWT | Drupal
+                            </p>
+                        </VerticalTimelineElement>
+                        <VerticalTimelineElement
+                            className="vertical-timeline-element--education"
+                            contentStyle={{ background: 'rgb( 30, 68, 72, 1)', color: '#fff' }}
+                            contentArrowStyle={{ borderRight: '7px solid  rgb( 30, 68, 72, 1)' }}
+                            date="2007 - 2010"
+                            iconStyle={{ background: 'rgb(30, 68, 72, 1)', color: '#fff' }}
+                        // icon={<SchoolIcon />}
+                        >
+                            <h3 className="vertical-timeline-element-title">B.Tech - IT</h3>
+                            <h4 className="vertical-timeline-element-subtitle">SSNCE - Chennai</h4>
+                        </VerticalTimelineElement>
+                    </VerticalTimeline>
                 </Col>
             </Row>
         </Container>

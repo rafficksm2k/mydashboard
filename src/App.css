@@ -18,3 +18,7 @@
   backdrop-filter: blur(2px);
   /* Optional: blur background */
 }
+
+.vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+  left: 85% !important
+}
