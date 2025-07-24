@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { MdWorkOutline, MdOutlineSchool } from "react-icons/md";
 import home from '../../assets/home.png'
 import '../../styles/home.scss'
 import Techstack from './Techstack'
@@ -80,6 +81,7 @@ export default function Home() {
                             contentArrowStyle={{ borderRight: '7px solid  rgba(30, 68, 72, 1)' }}
                             date="2018 - 2023"
                             iconStyle={{ background: 'rgba(30, 68, 72, 1)', color: '#fff' }}
+                            icon={<MdWorkOutline />}
                         >
                             <h3 className="vertical-timeline-element-title"><strong className="purple">System Analyst @IBM</strong></h3>
                             <h4 className="vertical-timeline-element-subtitle">Chennai, India</h4>
@@ -96,6 +98,7 @@ export default function Home() {
                             contentArrowStyle={{ borderRight: '7px solid  rgb( 30, 68, 72, 1)' }}
                             date="2010 - 2017"
                             iconStyle={{ background: 'rgb( 30, 68, 72, 1)', color: '#fff' }}
+                            icon={<MdWorkOutline />}
                         >
                             <h3 className="vertical-timeline-element-title"><strong className="purple">Senior Software Engineer @Photon Interactive</strong></h3>
                             <h4 className="vertical-timeline-element-subtitle">Chennai, India</h4>
@@ -108,13 +111,13 @@ export default function Home() {
                         </VerticalTimelineElement>
                         <VerticalTimelineElement
                             className="vertical-timeline-element--education"
-                            contentStyle={{ background: 'rgb( 30, 68, 72, 1)', color: '#fff' }}
+                            contentStyle={{ background: 'rgb( 30, 68, 72, 1)' }}
                             contentArrowStyle={{ borderRight: '7px solid  rgb( 30, 68, 72, 1)' }}
                             date="2007 - 2010"
                             iconStyle={{ background: 'rgb(30, 68, 72, 1)', color: '#fff' }}
-                        // icon={<SchoolIcon />}
+                            icon={<MdOutlineSchool />}
                         >
-                            <h3 className="vertical-timeline-element-title">B.Tech - IT</h3>
+                            <h3 className="vertical-timeline-element-title"><strong className="purple">B.Tech - IT</strong></h3>
                             <h4 className="vertical-timeline-element-subtitle">SSNCE - Chennai</h4>
                         </VerticalTimelineElement>
                     </VerticalTimeline>
