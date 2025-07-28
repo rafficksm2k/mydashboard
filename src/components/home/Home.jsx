@@ -119,6 +119,7 @@ export default function Home() {
                         >
                             <h3 className="vertical-timeline-element-title"><strong className="purple">B.Tech - IT</strong></h3>
                             <h4 className="vertical-timeline-element-subtitle">SSNCE - Chennai</h4>
+                            <h4 className="vertical-timeline-element-subtitle">Anna University</h4>
                         </VerticalTimelineElement>
                     </VerticalTimeline>
                 </Col>
