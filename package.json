@@ -10,9 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "pdfjs-dist": "3.11.174",
+    "@react-pdf/renderer": "^2.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
+    "react-pdf": "^5.7.1",
     "react-vertical-timeline-component": "^3.5.3"
   },
   "devDependencies": {

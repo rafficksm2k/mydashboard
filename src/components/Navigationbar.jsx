@@ -26,9 +26,6 @@ export default function Navigationbar() {
                         <Nav.Link as={Link} to='/'>
                             <AiOutlineHome style={{ marginBottom: "4px" }} />
                             Home</Nav.Link>
-                        <Nav.Link as={Link} to='/about'>
-                            <AiOutlineUser style={{ marginBottom: "3px" }} />
-                            About</Nav.Link>
                         <Nav.Link as={Link} to='/project'>
                             <AiOutlineFundProjectionScreen style={{ marginBottom: "3px" }} />
                             Projects</Nav.Link>
