@@ -4,6 +4,9 @@ import '../../styles/projects.css'
 
 export default function Projects() {
     const [isFlipped, setIsFlipped] = useState(false);
+    const [isSSBTFlipped, setIsSSBTFlipped] = useState(false);
+    const [isWalgreensFlipped, setIsWalgreensFlipped] = useState(false);
+    const [isJnJFlipped, setIsJnJFlipped] = useState(false);
     return (
         <>
             <h3>Projects</h3>
@@ -33,8 +36,8 @@ export default function Projects() {
                     </Col>
 
                     <Col xs="12" sm="12" md='6' >
-                        <div class="flip-card" onClick={() => { setIsFlipped(!isFlipped) }}>
-                            <div class="flip-card-inner" style={{ transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0)' }}>
+                        <div class="flip-card" onClick={() => { setIsSSBTFlipped(!isSSBTFlipped) }}>
+                            <div class="flip-card-inner" style={{ transform: isSSBTFlipped ? 'rotateY(180deg)' : 'rotateY(0)' }}>
                                 <div class="flip-card-front">
                                     <img src='/ssbt.jpg' className='metlife'></img>
                                     <h5><strong className="main-name purple">State Street Bank – Financial Web Solutions</strong></h5>
@@ -53,12 +56,12 @@ export default function Projects() {
 
                 <Row>
                     <Col xs="12" sm="12" md='6' >
-                        <div class="flip-card" onClick={() => { setIsFlipped(!isFlipped) }}>
-                            <div class="flip-card-inner" style={{ transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0)' }}>
+                        <div class="flip-card" onClick={() => { setIsWalgreensFlipped(!isWalgreensFlipped) }}>
+                            <div class="flip-card-inner" style={{ transform: isWalgreensFlipped ? 'rotateY(180deg)' : 'rotateY(0)' }}>
                                 <div class="flip-card-front">
                                     <img src='/walgreens.jpg' className='metlife'></img>
                                     <h5><strong className="main-name purple">Walgreens – E-Commerce Platform</strong></h5>
-                                    <p>Optimized high-traffic retail landing pages with React and JavaScript, enhancing performance and user experience.</p>
+                                    <p>Optimized high-traffic retail landing pages with React, enhancing performance and user experience.</p>
                                 </div>
                                 <div class="flip-card-back">
                                     <ul>
@@ -73,12 +76,12 @@ export default function Projects() {
                     </Col>
 
                     <Col xs="12" sm="12" md='6' >
-                        <div class="flip-card" onClick={() => { setIsFlipped(!isFlipped) }}>
-                            <div class="flip-card-inner" style={{ transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0)' }}>
+                        <div class="flip-card" onClick={() => { setIsJnJFlipped(!isJnJFlipped) }}>
+                            <div class="flip-card-inner" style={{ transform: isJnJFlipped ? 'rotateY(180deg)' : 'rotateY(0)' }}>
                                 <div class="flip-card-front">
                                     <img src='/jj.jpg' className='metlife'></img>
                                     <h5><strong className="main-name purple"> Johnson & Johnson – Global Multisite Platform</strong></h5>
-                                    <p>Developed and maintained a Drupal-based, Java/GWT/PHP platform supporting 500+ high‑traffic brand sites internationally.</p>
+                                    <p>Developed and maintained a Drupal-based, Java/GWT/PHP platform supporting sites.</p>
                                 </div>
                                 <div class="flip-card-back">
                                     <ul>
