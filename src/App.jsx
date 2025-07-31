@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Loader from './components/Loader'
 import Home from './components/home/Home'
 import Resume from './components/resume/Resume'
+import Contact from './components/contact/contact'
 import Projects from './components/projects/Projects'
 import './App.css'
 
@@ -27,6 +28,7 @@ function App() {
             <Route path='/' element={<Home />} /> {/*defines how to map a URL path to a component.*/}
             <Route path='project' element={<Projects />} />
             <Route path='resume' element={<Resume />} />
+            <Route path='contact' element={<Contact />} />
             <Route path='*' element={<Navigate to='/' />} />
           </Routes>
           <Footer />
