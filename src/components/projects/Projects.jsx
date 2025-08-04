@@ -39,7 +39,7 @@ export default function Projects() {
                                 <div class="flip-card-front">
                                     <img src='/ssbt.jpg' className='metlife'></img>
                                     <h5><strong className="main-name purple">State Street Bank – Financial Web Solutions</strong></h5>
-                                    <p>React-based insurance platform for data visualization and policy management.</p>
+                                    <p>Secure banking portal for financial operations and compliance</p>
                                 </div>
                                 <div class="flip-card-back">
                                     <ul>
