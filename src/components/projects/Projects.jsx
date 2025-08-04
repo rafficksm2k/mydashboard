@@ -22,13 +22,11 @@ export default function Projects() {
                                 </div>
                                 <div class="flip-card-back">
                                     <ul>
-
                                         <li>
                                             Developed a responsive insurance portal with dynamic dashboards and secure registration.
                                         </li>
                                         <li>Migrated app to IBM Cloud (Openshift, Docker, Helm, Kubernetes).</li>
-                                        <li>Improved performance by 60% with lazy loading and optimized components.</li>
-                                        <li>Achieved 90% unit test coverage using Enzyme, Mocha, and Chai.</li>
+                                        <li>Improved performance by 60% with lazy loading and achieved 90% unit test coverage using Enzyme, Mocha, and Chai.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -66,9 +64,7 @@ export default function Projects() {
                                 <div class="flip-card-back">
                                     <ul>
                                         <li>Developed and optimized high-traffic E-Commerce landing pages, improving load time by 80% for Walgreens (www.walgreens.com).</li>
-                                        <li>Built interactive store locator pages using Google Maps API for real-time geolocation and better UX.</li>
-                                        <li>Used JavaScript (ES6), React, Redux, and Java to build modular, scalable components.</li>
-                                        <li>Integrated RESTful APIs and enhanced cross-browser compatibility.</li>
+                                        <li>Used JavaScript (ES6), React and Redux to build modular, scalable components.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -85,8 +81,8 @@ export default function Projects() {
                                 </div>
                                 <div class="flip-card-back">
                                     <ul>
-                                        <li>Collaborated in building J&J’s centralized global digital experience platform (CANVAS), supporting over 500 brand and product websites using Drupal for content management .</li>
-                                        <li>Engineered secure, scalable backend solutions leveraging Java, PHP, and Google Web Toolkit (GWT) for interactive modules and business logic.</li>
+                                        <li>Collaborated in building J&J’s centralized global digital platform, supporting over 500 brand and product websites using Drupal for content management.</li>
+                                        <li>Developed scalable backend systems using Java, PHP, and Google Web Toolkit (GWT) for interactive modules and business logic.</li>
                                     </ul>
                                 </div>
                             </div>

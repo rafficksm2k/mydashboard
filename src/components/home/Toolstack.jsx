@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
-import { SiWebpack } from "react-icons/si";
+import { SiWebpack, SiSourcetree } from "react-icons/si";
 import { DiGit, DiDocker, DiOpenshift } from "react-icons/di";
 
 
@@ -25,8 +25,8 @@ export default function Toolstack() {
                     <p className='tech-text purple'>Webpack</p>
                 </Col>
                 <Col xs={4} md={2} className='tech-icons'>
-                    <SiWebpack />
-                    <p className='tech-text purple'>Webpack</p>
+                    <SiSourcetree />
+                    <p className='tech-text purple'>Sourcetree</p>
                 </Col>
             </Row>
         </Container>

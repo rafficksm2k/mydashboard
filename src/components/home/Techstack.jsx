@@ -1,5 +1,5 @@
 import React from 'react'
-import { DiJavascript1, DiReact, DiJava } from "react-icons/di";
+import { DiJavascript1, DiReact, DiJava, DiBootstrap } from "react-icons/di";
 import { BiLogoRedux } from "react-icons/bi";
 
 import { Container, Row, Col } from 'react-bootstrap';
@@ -25,8 +25,8 @@ export default function Techstack() {
                     <p className='tech-text purple'>Java</p>
                 </Col>
                 <Col xs={4} md={2} className='tech-icons'>
-                    <DiJava />
-                    <p className='tech-text purple'>Java</p>
+                    <DiBootstrap />
+                    <p className='tech-text purple'>Bootstrap</p>
                 </Col>
             </Row>
         </Container>
