@@ -36,17 +36,17 @@ export default function contact() {
                         <Form ref={form}>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                 <Form.Label className='contact-text'>Your Name</Form.Label>
-                                <Form.Control type="email" placeholder="What's your good name?"
+                                <Form.Control name="name" type="name" placeholder="What's your good name?"
                                     value={name} onChange={(e) => { setName(e.target.value) }} />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                 <Form.Label className='contact-text'>Email address</Form.Label>
-                                <Form.Control type="email" placeholder="name@example.com"
+                                <Form.Control name="email" type="email" placeholder="name@example.com"
                                     value={email} onChange={(e) => { setEmail(e.target.value) }} />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                                 <Form.Label className='contact-text'>Your Message</Form.Label>
-                                <Form.Control as="textarea" rows={3} placeholder="What you want to say"
+                                <Form.Control name="message" as="textarea" rows={3} placeholder="What you want to say"
                                     value={message} onChange={(e) => { setMessage(e.target.value) }} />
                             </Form.Group>
                             <Button className='send-button' variant="light" onClick={sendEmail}>Send</Button>
