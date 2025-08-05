@@ -32,7 +32,7 @@ export default function contact() {
             <Container >
                 <Row>
                     <Col className='contact' xs="12" sm="12" md='6'>
-                        <strong className="main-name purple contact-header"><h1>Contact</h1></strong>
+                        <strong className="main-name purple contact-header"><h1>Contact Me</h1></strong>
                         <Form ref={form}>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                 <Form.Label className='contact-text'>Your Name</Form.Label>

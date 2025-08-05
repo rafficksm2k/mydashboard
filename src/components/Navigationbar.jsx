@@ -36,7 +36,7 @@ export default function Navigationbar() {
                             Resume</Nav.Link>
                         <Nav.Link as={Link} to='/contact' onClick={() => setExpand(false)}>
                             <MdOutlineContactMail style={{ margin: "0px 3px 4px 0px" }} />
-                            Contact</Nav.Link>
+                            Contact Me</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
