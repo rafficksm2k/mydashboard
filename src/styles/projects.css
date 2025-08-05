@@ -54,6 +54,12 @@
     transform: rotateY(180deg);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .flip-card-back {
+        font-size: 10px;
+    }
+}
+
 .metlife {
     width: 50%;
     height: 100%;

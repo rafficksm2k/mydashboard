@@ -9,7 +9,7 @@ export default function Projects() {
     const [isJnJFlipped, setIsJnJFlipped] = useState(false);
     return (
         <>
-            <h3>Projects</h3>
+            <h3>Projects i worked</h3>
             <Container>
                 <Row>
                     <Col xs="12" sm="12" md='6' >
@@ -26,7 +26,7 @@ export default function Projects() {
                                             Developed a responsive insurance portal with dynamic dashboards and secure registration.
                                         </li>
                                         <li>Migrated app to IBM Cloud (Openshift, Docker, Helm, Kubernetes).</li>
-                                        <li>Improved performance by 60% with lazy loading and achieved 90% unit test coverage using Enzyme, Mocha, and Chai.</li>
+                                        <li>Improved performance by 60% with lazy loading and achieved 90% unit test coverage using Enzyme and Chai.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -43,8 +43,8 @@ export default function Projects() {
                                 </div>
                                 <div class="flip-card-back">
                                     <ul>
-                                        <li>Designed and developed secure web applications for State Street Bank (www.statestreet.com), ensuring compliance with banking and financial regulations.</li>
-                                        <li>Focused on data protection, responsive UI, and performance optimization tailored for enterprise-scale financial workflows.</li>
+                                        <li>Developed secure web applications for State Street Bank (www.statestreet.com), ensuring compliance with banking and financial regulations.</li>
+                                        <li>Focused on responsive UI and performance optimization tailored for enterprise-scale financial workflows.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -77,12 +77,12 @@ export default function Projects() {
                                 <div class="flip-card-front">
                                     <img src='/jj.jpg' className='metlife'></img>
                                     <h5><strong className="main-name purple"> Johnson & Johnson – Global Multisite Platform</strong></h5>
-                                    <p>Developed and maintained a Drupal-based, Java/GWT/PHP platform supporting sites.</p>
+                                    <p>Developed and maintained a Drupal-based, Java/GWT/PHP platform sites.</p>
                                 </div>
                                 <div class="flip-card-back">
                                     <ul>
-                                        <li>Collaborated in building J&J’s centralized global digital platform, supporting over 500 brand and product websites using Drupal for content management.</li>
-                                        <li>Developed scalable backend systems using Java, PHP, and Google Web Toolkit (GWT) for interactive modules and business logic.</li>
+                                        <li>Collaborated in building J&J’s centralized global digital platform and product websites using Drupal for content management.</li>
+                                        <li>Developed scalable systems using Java, PHP and Google Web Toolkit (GWT) for interactive modules and business logic.</li>
                                     </ul>
                                 </div>
                             </div>

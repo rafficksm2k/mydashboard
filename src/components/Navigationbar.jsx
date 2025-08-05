@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container'
-import logo from '../../public/raf.jpg'
+import logo from '/raf.jpg'
 import { Link } from 'react-router-dom';
 import {
     AiOutlineFileText,
@@ -15,7 +15,7 @@ import '../styles/navbar.css'
 
 export default function Navigationbar() {
     return (
-        <Navbar bg="dark" variant='dark' expand="lg" className="navbar">
+        <Navbar bg="dark" variant='dark' expand="lg" className="navbar fixednavbar">
             <Container>
                 <Navbar.Brand href='/' className="d-flex">
                     <img src={logo} className="img-fluid logo" alt="brand" />
