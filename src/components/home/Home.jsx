@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { MdWorkOutline, MdOutlineSchool } from "react-icons/md";
-import home from '../../assets/home.png'
+import home from '@/assets/home.png?format=webp&w=600'
 import '../../styles/home.scss'
 import Techstack from './Techstack'
 import Toolstack from './Toolstack'

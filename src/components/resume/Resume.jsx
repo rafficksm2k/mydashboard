@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import resume from '@/assets/Raffick_Resume.pdf'
 
 export default function Resume() {
     const [isMobile, setIsMobile] = useState(false);
@@ -27,7 +28,7 @@ export default function Resume() {
                 <div>
                     <h2>My Resume</h2>
                     <iframe
-                        src="/Raffick_Resume.pdf"
+                        src={resume}
                         width="85%"
                         height="1000px"
                         title="PDF Viewer"

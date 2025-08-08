@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react'
 import { Container, Row, Col, Button, Form } from 'react-bootstrap'
 import emailjs from '@emailjs/browser';
 import '../../styles/contact.scss'
+import contactImage from '@/assets/contact.svg?w=600&format=webp'
 
 export default function contact() {
     const [name, setName] = useState('');
@@ -102,7 +103,7 @@ export default function contact() {
                         }
                     </Col>
                     <Col className='contact-image' xs="12" sm="12" md='6'>
-                        <img src='/contact.svg'></img>
+                        <img src={contactImage}></img>
                     </Col>
                 </Row>
             </Container>
