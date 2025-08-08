@@ -3,6 +3,8 @@ import { Container, Row, Col, Button, Form } from 'react-bootstrap'
 import emailjs from '@emailjs/browser';
 import '../../styles/contact.scss'
 import contactImage from '@/assets/contact.svg?w=600&format=webp'
+import ContactFormLabel from './ContactFormLabel'
+import ContactSuccessPage from './ContactSuccessPage'
 
 export default function contact() {
     const [name, setName] = useState('');
@@ -17,6 +19,8 @@ export default function contact() {
     const form = useRef(); // This creates a reference
 
     const nameChange = (value) => {
+        console.log('dgsdgsgsgsdgs');
+
         setName(value);
         if (value == '' || value == null)
             setNameValid(false);
@@ -42,8 +46,43 @@ export default function contact() {
             setDescriptionValid(true);
     }
 
+    const formDetails = [{
+        label: 'Your Name',
+        labelClassName: 'contact-text',
+        errorLabel: 'Please fill your name',
+        errorLabelClassName: 'contact-text red',
+        inputName: 'name',
+        inputType: 'name',
+        inputPlaceholder: 'Whats your good name?',
+        inputChange: nameChange,
+        inputValue: name
+    },
+    {
+        label: 'Your Email',
+        labelClassName: 'contact-text',
+        errorLabel: 'Please fill your email',
+        errorLabelClassName: 'contact-text red',
+        inputName: 'email',
+        inputType: 'email',
+        inputPlaceholder: 'name@example.com',
+        inputChange: emailChange,
+        inputValue: email
+    },
+    {
+        label: 'Your Message',
+        labelClassName: 'contact-text',
+        errorLabel: 'Please fill your message',
+        errorLabelClassName: 'contact-text red',
+        inputName: 'message',
+        inputType: 'message',
+        inputPlaceholder: 'What you want to say?',
+        inputChange: messageChange,
+        inputValue: message
+    }];
+
     const sendEmail = (e) => {
         e.preventDefault();
+
         if (name == '' || name == null)
             setNameValid(false);
         if (email == '' || email == null)
@@ -68,46 +107,35 @@ export default function contact() {
     };
 
     return (
-        <>
-            <Container >
-                <Row>
-                    <Col className='contact' xs="12" sm="12" md='6'>
-                        <strong className="main-name purple contact-header"><h1>Contact Me</h1></strong>
-                        {
-                            !successPage ?
-                                <Form ref={form}>
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                        <Form.Label className='contact-text'>Your Name</Form.Label>
-                                        <Form.Control name="name" type="name" placeholder="What's your good name?"
-                                            value={name} onChange={(e) => { nameChange(e.target.value) }} />
-                                        {!nameValid ? <Form.Label className='contact-text red'>Please fill Your Name</Form.Label> : null}
-                                    </Form.Group>
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                        <Form.Label className='contact-text'>Email address</Form.Label>
-                                        <Form.Control name="email" type="email" placeholder="name@example.com"
-                                            value={email} onChange={(e) => { emailChange(e.target.value) }} />
-                                        {!emailValid ? <Form.Label className='contact-text red'>Please fill Your Email</Form.Label> : null}
-                                    </Form.Group>
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                        <Form.Label className='contact-text'>Your Message</Form.Label>
-                                        <Form.Control name="message" as="textarea" rows={3} placeholder="What you want to say"
-                                            value={message} onChange={(e) => { messageChange(e.target.value) }} />
-                                        {!descriptionValid ? <Form.Label className='contact-text red'>Please fill the description</Form.Label> : null}
-                                    </Form.Group>
-                                    <Button className='send-button' variant="light" onClick={sendEmail}>Send</Button>
-                                </Form>
-                                : <div>
-                                    <p>Email sent successfully!</p>
-                                    <p>Go to <strong><a href='/'>Home</a></strong> page</p>
-                                </div>
-                        }
-                    </Col>
-                    <Col className='contact-image' xs="12" sm="12" md='6'>
-                        <img src={contactImage}></img>
-                    </Col>
-                </Row>
-            </Container>
+        <Container >
+            <Row>
+                <Col className='contact' xs="12" sm="12" md='6'>
+                    <strong className="main-name purple contact-header"><h1>Contact Me</h1></strong>
+                    {
+                        !successPage ?
+                            <Form ref={form}>
 
-        </>
+                                {formDetails.map((detail, index) =>
+                                (
+                                    <Form.Group className="mb-3" key={index} controlId="exampleForm.ControlInput1">
+                                        <ContactFormLabel text={detail.label} classNme={detail.labelClassName} />
+                                        <Form.Control name={detail.inputName} type={detail.inputType} placeholder={detail.inputPlaceholder}
+                                            value={detail.inputValue} onChange={(e) => { detail.inputChange(e.target.value) }} />
+                                        {!nameValid ?
+                                            <ContactFormLabel text={detail.errorLabel} classNme={detail.errorLabelClassName} /> : null}
+                                    </Form.Group>
+                                ))
+                                }
+
+                                <Button className='send-button' variant="light" onClick={sendEmail}>Send</Button>
+                            </Form>
+                            : <ContactSuccessPage />
+                    }
+                </Col>
+                <Col className='contact-image' xs="12" sm="12" md='6'>
+                    <img src={contactImage}></img>
+                </Col>
+            </Row>
+        </Container>
     )
 }
