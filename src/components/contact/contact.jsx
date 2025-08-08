@@ -13,7 +13,7 @@ export default function contact() {
 
     const [nameValid, setNameValid] = useState(true);
     const [emailValid, setEmailValid] = useState(true);
-    const [descriptionValid, setDescriptionValid] = useState(true);
+    const [messageValid, setMessageValid] = useState(true);
 
     const [successPage, setSuccessPage] = useState(false);
     const form = useRef(); // This creates a reference
@@ -41,9 +41,9 @@ export default function contact() {
     const messageChange = (value) => {
         setMessage(value);
         if (value == '' || value == null)
-            setDescriptionValid(false);
+            setMessageValid(false);
         else
-            setDescriptionValid(true);
+            setMessageValid(true);
     }
 
     const formDetails = [{
@@ -55,7 +55,8 @@ export default function contact() {
         inputType: 'name',
         inputPlaceholder: 'Whats your good name?',
         inputChange: nameChange,
-        inputValue: name
+        inputValue: name,
+        isValid: nameValid
     },
     {
         label: 'Your Email',
@@ -66,7 +67,8 @@ export default function contact() {
         inputType: 'email',
         inputPlaceholder: 'name@example.com',
         inputChange: emailChange,
-        inputValue: email
+        inputValue: email,
+        isValid: emailValid
     },
     {
         label: 'Your Message',
@@ -77,7 +79,8 @@ export default function contact() {
         inputType: 'message',
         inputPlaceholder: 'What you want to say?',
         inputChange: messageChange,
-        inputValue: message
+        inputValue: message,
+        isValid: messageValid
     }];
 
     const sendEmail = (e) => {
@@ -88,9 +91,9 @@ export default function contact() {
         if (email == '' || email == null)
             setEmailValid(false);
         if (message == '' || message == null)
-            setDescriptionValid(false);
+            setMessageValid(false);
 
-        if (nameValid && emailValid && descriptionValid) {
+        if (nameValid && emailValid && messageValid) {
             emailjs.sendForm(
                 'service_r151vzf',     // Service ID from EmailJS
                 'template_jgsapdj',    // Template ID from EmailJS
@@ -121,7 +124,7 @@ export default function contact() {
                                         <ContactFormLabel text={detail.label} classNme={detail.labelClassName} />
                                         <Form.Control name={detail.inputName} type={detail.inputType} placeholder={detail.inputPlaceholder}
                                             value={detail.inputValue} onChange={(e) => { detail.inputChange(e.target.value) }} />
-                                        {!nameValid ?
+                                        {!detail.isValid ?
                                             <ContactFormLabel text={detail.errorLabel} classNme={detail.errorLabelClassName} /> : null}
                                     </Form.Group>
                                 ))
