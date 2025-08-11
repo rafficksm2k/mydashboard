@@ -3,24 +3,11 @@ import resume from '@/assets/Raffick_Resume.pdf'
 
 export default function Resume() {
     const [isMobile, setIsMobile] = useState(false);
-    // const [showDownload, setShowDownload] = useState(false);
 
     useEffect(() => {
-        // Check if device is mobile
         const mobileCheck = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         setIsMobile(mobileCheck);
-
-        // Set timeout to show download option if iframe doesn't load
-        // const timer = setTimeout(() => {
-        //     setShowDownload(true);
-        // }, 3000);
-
-        // return () => clearTimeout(timer);
     }, []);
-
-    // const handleIframeError = () => {
-    //     setShowDownload(true);
-    // };
 
     return (
         <div style={{ width: '100%', minHeight: '100vh', padding: '20px', boxSizing: 'border-box' }}>
@@ -40,7 +27,6 @@ export default function Resume() {
                 <div style={{
                     textAlign: 'center',
                     padding: '20px',
-                    // border: '1px solid #ddd',
                     borderRadius: '4px',
                     marginTop: '20px'
                 }}>

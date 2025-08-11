@@ -36,7 +36,6 @@ export default function Navigationbar() {
         icon: MdOutlineContactMail
     }];
 
-    //['Home', 'Projects', 'Resume', 'Contact Me'];
     return (
         <Navbar expanded={expand} bg="dark" variant='dark' expand="lg" className="navbar fixednavbar">
             <Container>
