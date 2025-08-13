@@ -1,93 +1,90 @@
 import React, { useState } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import '../../styles/projects.css'
+import metlifeImage from '@/assets/metlife.webp?format=webp&w=600'
+import ssbtImage from '@/assets/ssbt.jpg?format=webp&w=600'
+import walgreensImage from '@/assets/walgreens.webp?format=webp&w=600'
+import jjImage from '@/assets/jj.webp?format=webp&w=600'
 
 export default function Projects() {
-    const [isFlipped, setIsFlipped] = useState(false);
-    const [isSSBTFlipped, setIsSSBTFlipped] = useState(false);
-    const [isWalgreensFlipped, setIsWalgreensFlipped] = useState(false);
-    const [isJnJFlipped, setIsJnJFlipped] = useState(false);
+    const [flipped, setFlipped] = useState({});
+
+    const toggleFlip = (key) => {
+        setFlipped((prev) => ({
+            ...prev,
+            [key]: !prev[key]
+        }));
+    }
+
+    const projects = [{
+        name: 'Metlife',
+        title: 'MetLife Insurance Portal',
+        image: metlifeImage,
+        description: 'React-based insurance platform for data visualization and policy management.',
+        details: ['Developed a responsive insurance portal with dynamic dashboards and secure registration.',
+            'Migrated app to IBM Cloud (Openshift, Docker, Helm, Kubernetes).',
+            'Improved performance by 60% with lazy loading and achieved 90% unit test coverage using Enzyme and Chai.'
+        ]
+    },
+    {
+        key: 'ssbt',
+        title: 'State Street Bank – Financial Web Solutions',
+        image: ssbtImage,
+        description: 'Secure banking portal for financial operations and compliance',
+        details: [
+            'Developed secure web applications for State Street Bank (www.statestreet.com), ensuring compliance with banking and financial regulations.',
+            'Focused on responsive UI and performance optimization tailored for enterprise-scale financial workflows.',
+        ],
+    },
+    {
+        key: 'walgreens',
+        title: 'Walgreens – E-Commerce Platform',
+        image: walgreensImage,
+        description: 'Optimized high-traffic retail landing pages with React, enhancing performance and user experience.',
+        details: [
+            'Developed and optimized high-traffic E-Commerce landing pages, improving load time by 80% for Walgreens (www.walgreens.com).',
+            'Used JavaScript (ES6), React and Redux to build modular, scalable components.',
+        ],
+    },
+    {
+        key: 'jnj',
+        title: 'Johnson & Johnson – Global Multisite Platform',
+        image: jjImage,
+        description: 'Developed and maintained a Drupal-based, Java/GWT/PHP platform sites.',
+        details: [
+            'Collaborated in building J&J’s centralized global digital platform and product websites using Drupal for content management.',
+            'Developed scalable systems using Java, PHP and Google Web Toolkit (GWT) for interactive modules and business logic.',
+        ],
+    }];
     return (
         <>
             <h3>Projects i worked</h3>
             <Container>
                 <Row>
-                    <Col xs="12" sm="12" md='6' >
-                        <div class="flip-card" onClick={() => { setIsFlipped(!isFlipped) }}>
-                            <div class="flip-card-inner" style={{ transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0)' }}>
-                                <div class="flip-card-front">
-                                    <img src='/metlife.jpg' className='metlife'></img>
-                                    <h5><strong className="main-name purple">MetLife Insurance Portal </strong></h5>
-                                    <p>React-based insurance platform for data visualization and policy management.</p>
+                    {
+                        projects.map((project) => (
+                            <Col xs="12" sm="12" md='6' key={project.key}>
+                                <div class="flip-card" onClick={() => { toggleFlip(project.key) }}>
+                                    <div class="flip-card-inner" style={{ transform: flipped[project.key] ? 'rotateY(180deg)' : 'rotateY(0)' }}>
+                                        <div class="flip-card-front">
+                                            <img src={project.image} alt='project image' className='metlife'></img>
+                                            <h5><strong className="main-name purple">{project.title}</strong></h5>
+                                            <p>{project.description}</p>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <ul>
+                                                {project.details.map((detail, index) => {
+                                                    return (
+                                                        <li key={index}>{detail}</li>
+                                                    )
+                                                })}
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="flip-card-back">
-                                    <ul>
-                                        <li>
-                                            Developed a responsive insurance portal with dynamic dashboards and secure registration.
-                                        </li>
-                                        <li>Migrated app to IBM Cloud (Openshift, Docker, Helm, Kubernetes).</li>
-                                        <li>Improved performance by 60% with lazy loading and achieved 90% unit test coverage using Enzyme and Chai.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </Col>
-
-                    <Col xs="12" sm="12" md='6' >
-                        <div class="flip-card" onClick={() => { setIsSSBTFlipped(!isSSBTFlipped) }}>
-                            <div class="flip-card-inner" style={{ transform: isSSBTFlipped ? 'rotateY(180deg)' : 'rotateY(0)' }}>
-                                <div class="flip-card-front">
-                                    <img src='/ssbt.jpg' className='metlife'></img>
-                                    <h5><strong className="main-name purple">State Street Bank – Financial Web Solutions</strong></h5>
-                                    <p>Secure banking portal for financial operations and compliance</p>
-                                </div>
-                                <div class="flip-card-back">
-                                    <ul>
-                                        <li>Developed secure web applications for State Street Bank (www.statestreet.com), ensuring compliance with banking and financial regulations.</li>
-                                        <li>Focused on responsive UI and performance optimization tailored for enterprise-scale financial workflows.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
-
-                <Row>
-                    <Col xs="12" sm="12" md='6' >
-                        <div class="flip-card" onClick={() => { setIsWalgreensFlipped(!isWalgreensFlipped) }}>
-                            <div class="flip-card-inner" style={{ transform: isWalgreensFlipped ? 'rotateY(180deg)' : 'rotateY(0)' }}>
-                                <div class="flip-card-front">
-                                    <img src='/walgreens.jpg' className='metlife'></img>
-                                    <h5><strong className="main-name purple">Walgreens – E-Commerce Platform</strong></h5>
-                                    <p>Optimized high-traffic retail landing pages with React, enhancing performance and user experience.</p>
-                                </div>
-                                <div class="flip-card-back">
-                                    <ul>
-                                        <li>Developed and optimized high-traffic E-Commerce landing pages, improving load time by 80% for Walgreens (www.walgreens.com).</li>
-                                        <li>Used JavaScript (ES6), React and Redux to build modular, scalable components.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </Col>
-
-                    <Col xs="12" sm="12" md='6' >
-                        <div class="flip-card" onClick={() => { setIsJnJFlipped(!isJnJFlipped) }}>
-                            <div class="flip-card-inner" style={{ transform: isJnJFlipped ? 'rotateY(180deg)' : 'rotateY(0)' }}>
-                                <div class="flip-card-front">
-                                    <img src='/jj.jpg' className='metlife'></img>
-                                    <h5><strong className="main-name purple"> Johnson & Johnson – Global Multisite Platform</strong></h5>
-                                    <p>Developed and maintained a Drupal-based, Java/GWT/PHP platform sites.</p>
-                                </div>
-                                <div class="flip-card-back">
-                                    <ul>
-                                        <li>Collaborated in building J&J’s centralized global digital platform and product websites using Drupal for content management.</li>
-                                        <li>Developed scalable systems using Java, PHP and Google Web Toolkit (GWT) for interactive modules and business logic.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </Col>
+                            </Col>
+                        ))
+                    }
                 </Row>
             </Container >
 

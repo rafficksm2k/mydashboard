@@ -1,33 +1,19 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import { SiWebpack, SiSourcetree } from "react-icons/si";
 import { DiGit, DiDocker, DiOpenshift } from "react-icons/di";
 
+import RenderIcon from './RenderIcon';
 
 export default function Toolstack() {
     return (
         <Container>
             <Row style={{ paddingBottom: "30px", paddingLeft: "60px" }}>
-                <Col xs={4} md={2} className='tech-icons'>
-                    <DiGit />
-                    <p className='tech-text purple'>GIT</p>
-                </Col>
-                <Col xs={4} md={2} className='tech-icons'>
-                    <DiDocker />
-                    <p className='tech-text purple'>Docker</p>
-                </Col>
-                <Col xs={4} md={2} className='tech-icons'>
-                    <DiOpenshift />
-                    <p className='tech-text purple'>Openshift</p>
-                </Col>
-                <Col xs={4} md={2} className='tech-icons'>
-                    <SiWebpack />
-                    <p className='tech-text purple'>Webpack</p>
-                </Col>
-                <Col xs={4} md={2} className='tech-icons'>
-                    <SiSourcetree />
-                    <p className='tech-text purple'>Sourcetree</p>
-                </Col>
+                <RenderIcon icon={DiGit} text='GIT' />
+                <RenderIcon icon={DiDocker} text='Docker' />
+                <RenderIcon icon={DiOpenshift} text='Openshift' />
+                <RenderIcon icon={SiWebpack} text='Webpack' />
+                <RenderIcon icon={SiSourcetree} text='Sourcetree' />
             </Row>
         </Container>
     )

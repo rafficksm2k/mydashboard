@@ -7,9 +7,7 @@ export default function Footer() {
         <>
             <Container className="container footer-wrapper">
                 <Row className="border">
-                    <Col xs="6" sm="6" md='6' className="first"></Col>
-                    <Col xs="4" sm="4" md='4' className="second"></Col>
-                    <Col xs="2" sm="2" md='2' className="third"></Col>
+                    <Col xs="12" sm="12" md='12' className="first"></Col>
                 </Row>
             </Container>
             <Container className='mt-3'>
