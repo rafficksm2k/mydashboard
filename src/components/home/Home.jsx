@@ -1,24 +1,56 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
-import 'react-vertical-timeline-component/style.min.css';
-import '@/styles/home.scss'
-import Techstack from './Techstack'
-import Toolstack from './Toolstack'
-import WorkExperience from './WorkExperience'
-import Title from './Title'
-import Intro from './Intro'
+import React from "react";
+import { useState, useEffect } from "react";
+import { Container } from "react-bootstrap";
+import axios from "axios";
+import "react-vertical-timeline-component/style.min.css";
+import "@/styles/home.scss";
+import Techstack from "./Techstack";
+import Toolstack from "./Toolstack";
+import WorkExperience from "./WorkExperience";
+import Title from "./Title";
+import Intro from "./Intro";
 
 export default function Home() {
-    return (<>
-        <Intro />
-        <Container>
-            <Title title1='Professional' title2='Skillset' />
-            <Techstack />
-            <Title title1='Tools' title2='I use' />
-            <Toolstack />
-            <Title title1='Work' title2='Experience' />
-            <WorkExperience />
-        </Container>
+  const API = import.meta.env.VITE_API_HOST;
+  const [titles, setTitles] = useState({});
+
+  useEffect(() => {
+    getTitle();
+  }, []);
+
+  async function getTitle() {
+    await axios
+      .get(`${API}/title`)
+      .then((result) => {
+        setTitles(result.data);
+      })
+      .catch((err) => {
+        console.error("error while getting title", err);
+      });
+  }
+  return (
+    <>
+      <Intro />
+      <Container>
+        {titles && titles.skillset ? (
+          <Title
+            title1={titles.skillset.title1}
+            title2={titles.skillset.title2}
+          />
+        ) : null}
+        <Techstack />
+        {titles && titles.tools ? (
+          <Title title1={titles.tools.title1} title2={titles.tools.title2} />
+        ) : null}
+        <Toolstack />
+        {titles && titles.experience ? (
+          <Title
+            title1={titles.experience.title1}
+            title2={titles.experience.title2}
+          />
+        ) : null}
+        <WorkExperience />
+      </Container>
     </>
-    )
+  );
 }
