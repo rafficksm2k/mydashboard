@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Metlife",
+        "title": "MetLife Insurance Portal",
+        "image": "/images/metlife.webp",
+        "description": "React-based insurance platform for data visualization and policy management.",
+        "details": [
+            "Developed a responsive insurance portal with dynamic dashboards and secure registration.",
+            "Migrated app to IBM Cloud (Openshift, Docker, Helm, Kubernetes).",
+            "Improved performance by 60% with lazy loading and achieved 90% unit test coverage using Enzyme and Chai."
+        ]
+    },
+    {
+        "key": "ssbt",
+        "title": "State Street Bank – Financial Web Solutions",
+        "image": "/images/ssbt.jpg",
+        "description": "Secure banking portal for financial operations and compliance",
+        "details": [
+            "Developed secure web applications for State Street Bank (www.statestreet.com), ensuring compliance with banking and financial regulations.",
+            "Focused on responsive UI and performance optimization tailored for enterprise-scale financial workflows."
+        ]
+    },
+    {
+        "key": "walgreens",
+        "title": "Walgreens – E-Commerce Platform",
+        "image": "/images/walgreens.webp",
+        "description": "Optimized high-traffic retail landing pages with React, enhancing performance and user experience.",
+        "details": [
+            "Developed and optimized high-traffic E-Commerce landing pages, improving load time by 80% for Walgreens (www.walgreens.com).",
+            "Used JavaScript (ES6), React and Redux to build modular, scalable components."
+        ]
+    },
+    {
+        "key": "jnj",
+        "title": "Johnson & Johnson – Global Multisite Platform",
+        "image": "/images/jj.webp",
+        "description": "Developed and maintained a Drupal-based, Java/GWT/PHP platform sites.",
+        "details": [
+            "Collaborated in building J&J’s centralized global digital platform and product websites using Drupal for content management.",
+            "Developed scalable systems using Java, PHP and Google Web Toolkit (GWT) for interactive modules and business logic."
+        ]
+    }
+]

@@ -9,10 +9,11 @@ import Toolstack from "./Toolstack";
 import WorkExperience from "./WorkExperience";
 import Title from "./Title";
 import Intro from "./Intro";
+import title from "../../assets/title.json";
 
 export default function Home() {
-  const API = import.meta.env.VITE_API_HOST;
-  const [titles, setTitles] = useState({});
+  const API = import.meta.env.VITE_NODE_API_HOST;
+  const [titles, setTitles] = useState(title);
 
   useEffect(() => {
     getTitle();

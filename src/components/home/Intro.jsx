@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import home from "@/assets/home.png?format=webp&w=600";
 
 export default function Intro() {
-  const API = import.meta.env.VITE_API_HOST;
+  const API = import.meta.env.VITE_NODE_API_HOST;
   const defaultContent = `<p>
             With 12 years of hands-on experience in the software industry,
             including roles at
