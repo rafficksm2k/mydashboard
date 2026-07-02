@@ -100,12 +100,13 @@ export default function contact() {
     try {
       const response = await fetch(`${API}/users/sendemail`, {
         method: "POST",
+        credentials: "include",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formValues),
       });
       if (!response.ok) {
         if (response.status === 404) {
-          throw new Error("service not found error..");
+          throw new Error("service not found..");
         } else if (response.status === 500) {
           throw new Error("Server error. Please try again later.");
         } else {
@@ -133,6 +134,7 @@ export default function contact() {
     });
     if (Object.values(newValid).every((value) => value === true)) {
       nodeSendEmail();
+      setSuccessPage(true);
     }
 
     // if (Object.values(newValid).every((value) => value === true)) {
