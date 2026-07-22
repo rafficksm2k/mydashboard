@@ -1,30 +1,43 @@
 .mb-3 {
-    text-align: left;
+  text-align: left;
 }
 
 .contact {
-    border: solid rgb(29, 73, 83) 2px;
-    background-color: rgb(20 15 35);
-    padding: 15px 10px 15px 10px;
-    margin: 15px 0 15px 0;
-    border-radius: 15px;
+  border: solid rgb(29, 73, 83) 2px;
+  background-color: rgb(20 15 35);
+  padding: 15px 10px 15px 10px;
+  margin: 15px 0 15px 0;
+  border-radius: 15px;
 }
 
 .btn-light {
-    float: left;
+  float: left;
 }
 
 .contact-image {
-    margin-top: 100px;
-    margin-bottom: 25px;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 
 @media (max-width: 767px) {
-    .contact-image {
-        margin-top: 10px;
-    }
+  .contact-image {
+    margin-top: 10px;
+  }
 }
 
 .red {
-    color: var(--err-text-color);
+  color: var(--err-text-color);
+}
+
+.linkedin-img {
+  width: 100px;
+  height: 100px;
+}
+
+.linkedin-container {
+  margin-top: 25px;
+}
+
+.send-button {
+  margin-top: 20px;
 }

@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  color: white
+  color: white;
 }
 
 .loader-container {
@@ -19,6 +19,8 @@
   /* Optional: blur background */
 }
 
-.vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+.vertical-timeline--two-columns
+  .vertical-timeline-element-content
+  .vertical-timeline-element-date {
   /* left: 85% !important */
 }
